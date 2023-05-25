@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Danh Sách Phòng</h1>
+    <table>
+        <thead>
+            <tr>
+                <td>Mã phòng</td>
+                <td>Số tầng</td>
+                <td>Tên phòng</td>
+                <td>Mô tả</td>
+                <td>Chức năng</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for phong in phong_list %}
+                <tr>
+                    <td>{{ phong.maphong }}</td>
+                    <td>{{ phong.sotang }}</td>
+                    <td>{{ phong.tenphong }}</td>
+                    <td>{{ phong.mota }}</td>
+                    <td><a href="/phong/{{phong.maphong}}">Chi tiết</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

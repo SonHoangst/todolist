@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mã Phòng: {{ phong.maphong }} - Số Tầng: {{ phong.sotang }} - Tên Phòng: {{ phong.tenphong }}</h1>
+    <table>
+        <thead>
+            <tr>
+                <td>Mã thiết bị</td>
+                <td>Tên thiết bị</td>
+                <td>Giá mua</td>
+                <td>Ngày mua</td>
+                <td>Ngày thêm</td>
+                <td>Thời gian bảo hành</td>
+                <td>Mô tả</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for thietbi in thietbi_list %}
+                <tr>
+                    <td>{{ thietbi.mathietbi }}</td>
+                    <td>{{ thietbi.tenthietbi }}</td>
+                    <td>{{ thietbi.giamua }}</td>
+                    <td>{{ thietbi.ngaymua }}</td>
+                    <td>{{ thietbi.ngaythem }}</td>
+                    <td>{{ thietbi.thoigianbaohanh }}</td>
+                    <td>{{ thietbi.mota }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
